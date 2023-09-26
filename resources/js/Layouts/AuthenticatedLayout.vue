@@ -95,5 +95,74 @@ const showingNavigationDropdown = ref(false);
             </div>
 
         </div>
+
+        <main>
+            <div class="pt-[98px]"></div>
+            <slot />
+        </main>
+
+        <div class="w-full bg-[#f3dcb2] mt-10">
+            <div class="max-w-[1500px] mx-auto">
+                    <div class="text-[23px] pt-4 font-extrabold">Recomendado com base em suas tendências de compras</div>
+                    <div class="flex justify-center items-stretch">
+                        <div class="pt-4 text-center mx-auto">
+                            <div class="w-[158px] h-[150px] overflow-hidden">
+                                <img src="https://via.placeholder.com/158x150" alt="">
+                            </div>
+                            <div class="w-[160px] text-[12px] py-2 text-teal-600 font-extrabold hover:text-red-600 cursor-pointer">
+                                Este um título de teste
+                            </div>
+                            <div class="flex justify-start">
+                                <div class="text-xs font-extrabold text-red-600 w-full text-left">R$%500.00</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <footer class="bg-[#013750]">
+            <div class="bg-[#2c6b74] hover:bg-[#00988d] w-full p-3.5 cursor-pointer text-[#fef5c8] font-extrabold text-center">
+                    Voltar ao topo
+            </div>
+            <div class="flex items-stretch justify-between max-w-[1000px] mx-auto p-10 text-[#fef5c8]">
+                    <ul>
+                        <li class="font-extrabold text-lg">Conheça-nos</li>
+                        <li class="hover:underline cursor-pointer">Meu linkedin</li>
+                        <li class="hover:underline cursor-pointer">Sobre MarketGui</li>
+                        <li class="hover:underline cursor-pointer">Quem sou eu</li>
+                        <li class="hover:underline cursor-pointer">Minhas habilidades</li>
+                        <li class="hover:underline cursor-pointer">GitHub</li>
+                    </ul>
+
+                    <ul>
+                        <li class="font-extrabold text-lg">Faça dinheiro com a gente</li>
+                        <li class="hover:underline cursor-pointer">Como posso te ajudar ?</li>
+                        <li class="hover:underline cursor-pointer">adquira meus serviços</li>
+                        <li class="hover:underline cursor-pointer">Peça o seu orcamento</li>
+                        <li class="hover:underline cursor-pointer">Alavanque os seus negócios</li>
+                        <li class="hover:underline cursor-pointer">Contrate-me</li>
+                        <li class="hover:underline cursor-pointer">Adquira outros projetos</li>
+                    </ul>
+
+                    <ul>
+                        <li class="font-extrabold text-lg">Conheça-nos</li>
+                        <li class="hover:underline cursor-pointer">Meu linkedin</li>
+                        <li class="hover:underline cursor-pointer">Sobre MarketGui</li>
+                        <li class="hover:underline cursor-pointer">Quem sou eu</li>
+                        <li class="hover:underline cursor-pointer">Minhas habilidades</li>
+                        <li class="hover:underline cursor-pointer">GitHub</li>
+                    </ul>
+
+                    <ul>
+                        <li class="font-extrabold text-lg">Faça dinheiro com a gente</li>
+                        <li class="hover:underline cursor-pointer">Como posso te ajudar ?</li>
+                        <li class="hover:underline cursor-pointer">adquira meus serviços</li>
+                        <li class="hover:underline cursor-pointer">Peça o seu orcamento</li>
+                        <li class="hover:underline cursor-pointer">Alavanque os seus negócios</li>
+                        <li class="hover:underline cursor-pointer">Contrate-me</li>
+                        <li class="hover:underline cursor-pointer">Adquira outros projetos</li>
+                    </ul>
+            </div>
+        </footer>
     </div>
 </template>
