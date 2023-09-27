@@ -5,6 +5,7 @@ import MapMarkerOutline from 'vue-material-design-icons/MapMarkerOutline.vue';
 import MenuDownIcon from 'vue-material-design-icons/MenuDown.vue';
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
 import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue';
+import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
 const showingNavigationDropdown = ref(false);
 </script>
@@ -96,7 +97,51 @@ const showingNavigationDropdown = ref(false);
 
         </div>
 
-        <main>
+        <div class="flex items-center justify-between bg-[#0f2e47] h-[38px] fixed z-40 min-w-[1150px] w-full mt-[60px]">
+            <div class="flex">
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <MenuIcon fillColor="#fef5c8" :size="26" class="mr-0.5" />
+                            <div class="text-[14px] text-[#fef5c8] font-extrabold">Todos</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <div class="text-[14px] text-[#fef5c8] font-extrabold">Ofertas de Hoje</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <div class="text-[14px] text-[#fef5c8] font-extrabold">Gift Cards</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <div class="text-[14px] text-[#fef5c8] font-extrabold">Compre Novamente</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <div class="text-[14px] text-[#fef5c8] font-extrabold">Serviços Customizados</div>
+                    </div>
+                </div>
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <div class="text-14px] text-[#fef5c8] font-extrabold">Gui MarketGui.com</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex">
+                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                    <div class="flex items-center justify-between px-2 ">
+                            <div class="text-[14px] text-[#fef5c8] font-extrabold">Ofertas de Moda festiva</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="max-w-[1500px] mx-auto">
             <div class="pt-[98px]"></div>
             <slot />
         </main>
