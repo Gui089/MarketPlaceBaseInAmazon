@@ -6,8 +6,13 @@ import MenuDownIcon from 'vue-material-design-icons/MenuDown.vue';
 import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
 import CartMinusIcon from 'vue-material-design-icons/CartMinus.vue';
 import MenuIcon from 'vue-material-design-icons/Menu.vue';
+import AccountCircleIcon from 'vue-material-design-icons/AccountCircle.vue';
+import CloseIcon from 'vue-material-design-icons/Close.vue';
+import ChevronRightIcon from 'vue-material-design-icons/ChevronRight.vue';
 
-const showingNavigationDropdown = ref(false);
+
+
+let showMenu = ref(false)
 </script>
 
 <template>
@@ -99,7 +104,7 @@ const showingNavigationDropdown = ref(false);
 
         <div class="flex items-center justify-between bg-[#0f2e47] h-[38px] fixed z-40 min-w-[1150px] w-full mt-[60px]">
             <div class="flex">
-                <div class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
+                <div @click="showMenu= true" class="flex h-[30px] border-[#0f2e47] rounded-sm hover:border-[1px] hover:border-[#fcf5d3] cursor-pointer">
                     <div class="flex items-center justify-between px-2 ">
                             <MenuIcon fillColor="#fef5c8" :size="26" class="mr-0.5" />
                             <div class="text-[14px] text-[#fef5c8] font-extrabold">Todos</div>
@@ -209,5 +214,39 @@ const showingNavigationDropdown = ref(false);
                     </ul>
             </div>
         </footer>
+    </div>
+
+    <div 
+        v-if="showMenu"
+        class="top-0 z-50 fixed w-full h-full bg-black bg-opacity-70"
+        :class="[showMenu ? 'animate__animated animate__fadeIn animate__faster' : '']"
+    >
+
+        <CloseIcon
+           @click="showMenu= false"
+           :size="30"
+           fillColor="#f3dcb2"
+           class="ml-2.5 mt-3.5 left-80 cursor-pointer fixed z-50" 
+           :class="[showMenu ? 'animate__animated animate__fadeIn animate__faster' : '']"
+        />
+        <div
+         class="w-80 h-full bg-[#f3dcb2]"
+         :class="[showMenu ? 'animate__animated animate__slideInLeft animate__faster' : '']"
+         >
+            <div class="bg-[#2c6b74] font-extrabold text-[18px] flex items-center p-2 text-[#f3dcb2] pl-7">
+                <span>Olá, Entrar</span>
+            </div>
+
+            <div class="font-extrabold text-[16px] pt-3 pb-1 pl-6 pr-3 text-[#013750]">
+                Comprar por departamento
+            </div>
+
+            <div class="hover:bg-[#f3b578] pl-6 pr-3">
+                <div class="py-2.5 text-[14px] text-[#013750] flex justify-between items-center hover:bg-[#f3b578] cursor-pointer">
+                    Computadores <ChevronRightIcon :size="20" fillColor="#808080"/>
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
